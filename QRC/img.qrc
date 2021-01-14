@@ -1,0 +1,43 @@
+<RCC>
+  <qresource prefix="img">
+    <file>Icon/icon_main.png</file>
+    <file>Icon/icon_sub.png</file>
+    <file>Icon/sc_save.png</file>
+    <file>Icon/unit_add.png</file>
+    <file>Icon/unit_all_stack.png</file>
+    <file>Icon/unit_box_size.png</file>
+    <file>Icon/unit_close.png</file>
+    <file>Icon/unit_close_pressed.png</file>
+    <file>Icon/unit_color.png</file>
+    <file>Icon/unit_dbox.png</file>
+    <file>Icon/unit_delete.png</file>
+    <file>Icon/unit_down.png</file>
+    <file>Icon/unit_line_st.png</file>
+    <file>Icon/unit_line_thk.png</file>
+    <file>Icon/unit_marker.png</file>
+    <file>Icon/unit_marker_color.png</file>
+    <file>Icon/unit_marker_fill.png</file>
+    <file>Icon/unit_marker_size.png</file>
+    <file>Icon/unit_min.png</file>
+    <file>Icon/unit_no.png</file>
+    <file>Icon/unit_open_folder.png</file>
+    <file>Icon/unit_quit.png</file>
+    <file>Icon/unit_radio_checked.png</file>
+    <file>Icon/unit_radio_unchecked.png</file>
+    <file>Icon/unit_refresh.png</file>
+    <file>Icon/unit_run.png</file>
+    <file>Icon/unit_scale_x.png</file>
+    <file>Icon/unit_scale_y.png</file>
+    <file>Icon/unit_selection_stack.png</file>
+    <file>Icon/unit_task.png</file>
+    <file>Icon/unit_text_size.png</file>
+    <file>Icon/unit_toggle_off.png</file>
+    <file>Icon/unit_toggle_on.png</file>
+    <file>Icon/unit_tran.png</file>
+    <file>Icon/unit_up.png</file>
+    <file>Icon/unit_x.png</file>
+    <file>Icon/unit_y.png</file>
+    <file>Icon/unit_yes.png</file>
+	<file>Icon/icecube.png</file>
+  </qresource>
+</RCC>
