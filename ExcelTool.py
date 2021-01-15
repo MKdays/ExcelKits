@@ -28,7 +28,7 @@ from PySide2.QtGui import *
 from PySide2 import QtCore, QtWidgets, QtGui, QtXml, QtUiTools
 
 #QT리소스
-import resource
+from qt_resource import resource
 
 #Pywin32 라이브러리
 from win32api import GetCursorPos #마우스 좌표 추적
