@@ -188,7 +188,7 @@ class CLASS_MAINWINDOW(QMainWindow):
         except:pass #폴더 있으면 패스
         try :
             config = configparser.ConfigParser()
-            config_file_path = app_path + "/Lib/Settings/settings.ini"
+            config_file_path = app_path + "/Lib/exceltool_settings/settings.ini"
             config.read(config_file_path, encoding="utf-8")
 
             #Section_N 작성
@@ -219,7 +219,7 @@ class CLASS_MAINWINDOW(QMainWindow):
     def sc_load_run(self):
         try:
             config = configparser.ConfigParser()
-            config_file_path = app_path + "/Lib/Settings/settings.ini"
+            config_file_path = app_path + "/Lib/exceltool_settings/settings.ini"
             config.read(config_file_path, encoding="utf-8")
             for i in range (1,7):
                 a = config["Section_"+str(i)]["title"]
