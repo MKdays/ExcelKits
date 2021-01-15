@@ -97,8 +97,8 @@ border-width:0px;
      <string>Yes</string>
     </property>
     <property name="icon">
-     <iconset resource="../QRC/img.qrc">
-      <normaloff>:/img/Icon/unit_yes.png</normaloff>:/img/Icon/unit_yes.png</iconset>
+     <iconset resource="../../__resource__/resource.qrc">
+      <normaloff>:/__resource__/image/unit_yes.png</normaloff>:/__resource__/image/unit_yes.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -123,8 +123,8 @@ border-width:0px;
      <string>No</string>
     </property>
     <property name="icon">
-     <iconset resource="../QRC/img.qrc">
-      <normaloff>:/img/Icon/unit_no.png</normaloff>:/img/Icon/unit_no.png</iconset>
+     <iconset resource="../../__resource__/resource.qrc">
+      <normaloff>:/__resource__/image/unit_no.png</normaloff>:/__resource__/image/unit_no.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -187,10 +187,10 @@ p, li { white-space: pre-wrap; }
 margin-left: 1px;
 margin-right: 1px;
 margin-top: 1px;
-image: url(:/img/Icon/unit_close.png);}
+image: url(:/__resource__/image/unit_close.png);}
 
 QPushButton:hover {background-color: rgb(232, 17, 35);
-image: url(:/img/Icon/unit_close_pressed.png);}
+image: url(:/__resource__/image/unit_close_pressed.png);}
 QPushButton:pressed {background-color: rgb(241, 112, 122);}</string>
    </property>
    <property name="text">
@@ -208,7 +208,7 @@ QPushButton:pressed {background-color: rgb(241, 112, 122);}</string>
   <zorder>msg_close_btn</zorder>
  </widget>
  <resources>
-  <include location="../QRC/img.qrc"/>
+  <include location="../../__resource__/resource.qrc"/>
  </resources>
  <connections/>
 </ui>

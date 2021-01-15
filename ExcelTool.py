@@ -28,7 +28,7 @@ from PySide2.QtGui import *
 from PySide2 import QtCore, QtWidgets, QtGui, QtXml, QtUiTools
 
 #QT리소스
-from QRC.img import qt_resource_data
+import resource
 
 #Pywin32 라이브러리
 from win32api import GetCursorPos #마우스 좌표 추적
@@ -82,7 +82,7 @@ class CLASS_MAINWINDOW(QMainWindow):
 
     def ui_basic(self):
         self.setWindowTitle(app_ver) #윈도우 제목표시줄
-        self.setWindowIcon(QIcon(":/img/Icon/icon_main.png")) #아이콘 경로
+        self.setWindowIcon(QIcon(":/__resource__/image/icon_main.png")) #아이콘 경로
 
     def ui_shadow(self):
         self.setFixedSize(self.frame.width()+20,self.frame.height()+20) #윈도우 사이즈 : Qframe한변 +10px
@@ -1181,7 +1181,7 @@ class CLASS_BOX_MAIN(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle(app_sub_box) #제목표시줄
-        self.setWindowIcon(QIcon(":/img/Icon/icon_sub.png")) #아이콘 경로
+        self.setWindowIcon(QIcon(":/__resource__/image/icon_sub.png")) #아이콘 경로
         self.setWindowOpacity(0.5) #윈도우창 투명도 (0~1)
         self.setMouseTracking(True) #마우스이동 추적활성화
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint) #제목표시줄 감추기
@@ -1261,7 +1261,7 @@ class CLASS_DRAG_MAIN(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle(app_sub_drag) #제목표시줄
-        self.setWindowIcon(QIcon(":/img/Icon/icon_sub.png")) #아이콘 경로
+        self.setWindowIcon(QIcon(":/__resource__/image/icon_sub.png")) #아이콘 경로
         self.setWindowOpacity(0.5) #윈도우창 투명도 (0~1)
         self.setMouseTracking(True) #마우스이동 추적활성화
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint) #제목표시줄 감추기
