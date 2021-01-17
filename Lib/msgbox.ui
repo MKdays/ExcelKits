@@ -17,21 +17,32 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-font: 13px &quot;맑은 고딕&quot;;color: rgb(63, 63, 63);
-background-color: None;
+   <string notr="true">QWidget{
+	font: 13px &quot;맑은 고딕&quot;;
+	color: rgb(63, 63, 63);
+	background-color: None;
 }
 
 
 /*** 버튼 ***/
-QPushButton {background-color: transparent;border-radius: 0px;border-style: solid;border-width: 1px;border-color: transparent}
+QPushButton{
+	background-color: transparent;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: transparent
+}
 
-QPushButton:hover {background-color: rgb(230, 230, 230);}
+QPushButton:hover{
+	background-color: rgb(230, 230, 230);
+}
 
-QPushButton:pressed {background-color: rgb(205, 205, 205);}
+QPushButton:pressed{
+	background-color: rgb(205, 205, 205);
+}
 
-QPushButton:focus {
-border-color: rgb(200,200,200);
+QPushButton:focus{
+	border-color: rgb(200,200,200);
 }</string>
   </property>
   <widget class="QLabel" name="title">
@@ -47,7 +58,10 @@ border-color: rgb(200,200,200);
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget {font: 15px; color: rgb(127, 127, 127);}</string>
+    <string notr="true">QLabel{
+	font: 15px;
+	color: rgb(127, 127, 127);
+}</string>
    </property>
    <property name="text">
     <string>알림</string>
@@ -68,11 +82,11 @@ border-color: rgb(200,200,200);
    <property name="styleSheet">
     <string notr="true">/**프레임**/
 QFrame{
-background-color: white;
-border-radius: 0px;
-border-style:solid;
-border-width:0px;
-/*border-color: rgb(127, 127, 127);*/
+	background-color: white;
+	border-radius: 0px;
+	border-style:solid;
+	border-width:0px;
+	/*border-color: rgb(127, 127, 127);*/
 }</string>
    </property>
    <property name="frameShape">
@@ -152,8 +166,7 @@ border-width:0px;
      <enum>Qt::NoFocus</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTextEdit{
-}</string>
+     <string notr="true"/>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;

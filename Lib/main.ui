@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1059</width>
-    <height>880</height>
+    <width>727</width>
+    <height>708</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,53 +29,179 @@
    <string/>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*** 메인폰트 ***/
-QWidget {font: 13px &quot;Malgun Gothic&quot;; color: rgb(63, 63, 63);}
+   <string notr="true">
+/*** 메인폰트 ***/
+QWidget{
+	font: 13px &quot;Malgun Gothic&quot;; 
+	color: rgb(63, 63, 63);
+}
 
 /*** 버튼 ***/
-QPushButton {background-color: transparent;border-radius: 0px;border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);height: 24px;width: 80px;}
-QPushButton:hover {background-color: rgb(229, 241, 251);border-color: rgb(0, 120, 215);}
-QPushButton:pressed {background-color: rgb(205, 228, 247);border-color: rgb(0, 85, 155);}
+QPushButton{
+	background-color: transparent;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+	height: 24px;
+	width: 80px;
+}
+
+QPushButton:hover{
+	background-color: rgb(229, 241, 251);
+	border-color: rgb(0, 120, 215);
+}
+
+QPushButton:pressed{
+	background-color: rgb(205, 228, 247);
+border-color: rgb(0, 85, 155);
+}
 
 /*** 스핀박스 ***/
-QSpinBox{border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);}
-QSpinBox:hover {border-color: rgb(0, 120, 215);}
-QSpinBox::up-button {image: url(:/__resource__/image/unit_up.png);width: 20;background-color: rgb(240, 240, 240);}
-QSpinBox::up-button:hover {background-color: rgb(229, 241, 251);}
-QSpinBox::up-button:pressed {background-color: rgb(205, 228, 247);}
-QSpinBox::down-button {image: url(:/__resource__/image/unit_down.png);width: 20;background-color: rgb(240, 240, 240);}
-QSpinBox::down-button:hover {background-color: rgb(229, 241, 251);}
-QSpinBox::down-button:pressed {background-color: rgb(205, 228, 247);}
+QSpinBox{
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+}
+
+QSpinBox:hover{
+	border-color: rgb(0, 120, 215);
+}
+
+QSpinBox::up-button{
+	image: url(:/__resource__/image/unit_up.png);
+	width: 20;
+	background-color: rgb(240, 240, 240);
+}
+
+QSpinBox::up-button:hover{
+	background-color: rgb(229, 241, 251);
+}
+
+QSpinBox::up-button:pressed{
+	background-color: rgb(205, 228, 247);
+}
+
+QSpinBox::down-button{
+	image: url(:/__resource__/image/unit_down.png);
+	width: 20;
+	background-color: rgb(240, 240, 240);
+}
+
+QSpinBox::down-button:hover{
+	background-color: rgb(229, 241, 251);
+}
+
+QSpinBox::down-button:pressed{
+	background-color: rgb(205, 228, 247);
+}
 
 /*** 스핀박스 ***/
-QDoubleSpinBox{border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);}
-QDoubleSpinBox:hover {border-color: rgb(0, 120, 215);}
-QDoubleSpinBox::up-button {image: url(:/__resource__/image/unit_up.png);width: 20;background-color: rgb(240, 240, 240);}
-QDoubleSpinBox::up-button:hover {background-color: rgb(229, 241, 251);}
-QDoubleSpinBox::up-button:pressed {background-color: rgb(205, 228, 247);}
-QDoubleSpinBox::down-button {image: url(:/__resource__/image/unit_down.png);width: 20;background-color: rgb(240, 240, 240);}
-QDoubleSpinBox::down-button:hover {background-color: rgb(229, 241, 251);}
-QDoubleSpinBox::down-button:pressed {background-color: rgb(205, 228, 247);}
+QDoubleSpinBox{
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+}
+
+QDoubleSpinBox:hover{
+	border-color: rgb(0, 120, 215);
+}
+
+QDoubleSpinBox::up-button{
+	image: url(:/__resource__/image/unit_up.png);
+	width: 20;
+	background-color: rgb(240, 240, 240);
+}
+
+QDoubleSpinBox::up-button:hover{
+	background-color: rgb(229, 241, 251);
+}
+
+QDoubleSpinBox::up-button:pressed{
+	background-color: rgb(205, 228, 247);
+}
+
+QDoubleSpinBox::down-button{
+	image: url(:/__resource__/image/unit_down.png);
+	width: 20;
+	background-color: rgb(240, 240, 240);
+}
+
+QDoubleSpinBox::down-button:hover{
+	background-color: rgb(229, 241, 251);
+}
+
+QDoubleSpinBox::down-button:pressed{
+	background-color: rgb(205, 228, 247);
+}
 
 /*** 콤보박스 ***/
-QComboBox {background-color: transparent;border-radius: 0px;border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);}
-QComboBox:hover {background-color: rgb(229, 241, 251);border-color: rgb(0, 120, 215);}
-QComboBox:drop-down {image: url(:/__resource__/image/unit_dbox.png);width: 20px;}
+QComboBox{
+	background-color: transparent;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+}
+
+QComboBox:hover{
+	background-color: rgb(229, 241, 251);
+	border-color: rgb(0, 120, 215);
+}
+
+QComboBox:drop-down{
+	image: url(:/__resource__/image/unit_dbox.png);
+	width: 20px;
+}
 
 /*** 프로그레스바 ***/
-QProgressBar{background-color: white; border-radius: 0px;border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);text-align: center;}
-QProgressBar::chunk{background-color: rgb(205, 228, 247);}
+QProgressBar{
+	background-color: white;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+	text-align: center;
+}
+
+QProgressBar::chunk{
+	background-color: rgb(205, 228, 247);
+}
 
 /*** 라인 에디트 ***/
-QLineEdit {border-radius: 0px;border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);}
-QLineEdit:hover {border-color: rgb(0, 120, 215);}
+QLineEdit{
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+}
+
+QLineEdit:hover{
+	border-color: rgb(0, 120, 215);
+}
 
 /*** 플레인 텍스트 에디트 ***/
-QPlainTextEdit {border-radius: 0px;border-style: solid;border-width: 1px;border-color: rgb(200, 200, 200);}
-QPlainTextEdit:hover {border-color: rgb(0, 120, 215);}
+QPlainTextEdit{
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(200, 200, 200);
+}
+
+QPlainTextEdit:hover{
+	border-color: rgb(0, 120, 215);
+}
 
 /*** 그룹박스 ***/
-QGroupBox{font: 14px;color: rgb(63, 63, 63);border: 0px solid; border-color: rgb(200, 200, 200);}</string>
+QGroupBox{
+	font: 14px;
+	color: rgb(63, 63, 63);
+	border: 0px solid;
+	border-color: rgb(200, 200, 200);
+}
+
+
+</string>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonIconOnly</enum>
@@ -115,11 +241,11 @@ margin-bottom: 1px;
 
 /* 기본탭 */
 QTabBar::tab{
-width: 50;
-color: blue;font: 30px; 
-height: 30px;
-background: transparent;
-border: 0px solid;
+	width: 50;
+	color: blue;font: 30px; 
+	height: 30px;
+	background: transparent;
+	border: 0px solid;
 }
 
 </string>
@@ -404,6 +530,9 @@ border: 0px solid;
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="text">
         <string>Apply</string>
        </property>
@@ -421,7 +550,7 @@ border: 0px solid;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_color.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_color.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_10">
@@ -437,7 +566,7 @@ border: 0px solid;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_line_thk.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_line_thk.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_11">
@@ -453,7 +582,7 @@ border: 0px solid;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_line_st.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_line_st.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_12">
@@ -469,7 +598,7 @@ border: 0px solid;
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_tran.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_tran.png</pixmap>
        </property>
       </widget>
       <widget class="QDoubleSpinBox" name="input_opt2">
@@ -524,11 +653,11 @@ border: 0px solid;
        <property name="styleSheet">
         <string notr="true">/**프레임**/
 QFrame{
-background-color: white;
-border-radius: 10px;
-border-style:solid;
-border-width:1px;
-border-color: rgb(200, 200, 200);
+	background-color: white;
+	border-radius: 10px;
+	border-style:solid;
+	border-width:1px;
+	border-color: rgb(200, 200, 200);
 }</string>
        </property>
        <property name="frameShape">
@@ -779,7 +908,7 @@ border-color: rgb(200, 200, 200);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_marker.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_marker.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_15">
@@ -795,7 +924,7 @@ border-color: rgb(200, 200, 200);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_marker_color.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_marker_color.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_14">
@@ -811,7 +940,7 @@ border-color: rgb(200, 200, 200);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_marker_fill.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_marker_fill.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_16">
@@ -827,7 +956,7 @@ border-color: rgb(200, 200, 200);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_marker_size.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_marker_size.png</pixmap>
        </property>
       </widget>
       <widget class="QFrame" name="frame_3">
@@ -854,11 +983,11 @@ border-color: rgb(200, 200, 200);
        <property name="styleSheet">
         <string notr="true">/**프레임**/
 QFrame{
-background-color: white;
-border-radius: 0px;
-border-style:solid;
-border-width:1px;
-border-color: rgb(200, 200, 200);
+	background-color: white;
+	border-radius: 0px;
+	border-style:solid;
+	border-width:1px;
+	border-color: rgb(200, 200, 200);
 }</string>
        </property>
        <property name="frameShape">
@@ -892,11 +1021,11 @@ border-color: rgb(200, 200, 200);
        <property name="styleSheet">
         <string notr="true">/**프레임**/
 QFrame{
-background-color: white;
-border-radius: 0px;
-border-style:solid;
-border-width:1px;
-border-color: rgb(200, 200, 200);
+	background-color: white;
+	border-radius: 0px;
+	border-style:solid;
+	border-width:1px;
+	border-color: rgb(200, 200, 200);
 }</string>
        </property>
        <property name="frameShape">
@@ -1075,7 +1204,7 @@ border-color: rgb(200, 200, 200);
 
 
 /*상부 헤더*/
-QHeaderView::section {
+QHeaderView::section{
 	background-color: rgb(240, 240, 240);
 	border-style: solid;
 	border-color: rgb(220, 220, 220);
@@ -1093,7 +1222,7 @@ QTableWidget{
 }
 
 /*테이블 내 가이드라인 컬러*/
-QTableWidget {
+QTableWidget{
 	gridline-color: rgb(220, 220, 220);
 }
 
@@ -1239,7 +1368,7 @@ QPushButton:pressed {background-color: rgb(205, 228, 247);border-color: rgb(0, 8
        <string/>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="../../__resource__/resource.qrc">
         <normaloff>:/__resource__/image/unit_add.png</normaloff>:/__resource__/image/unit_add.png</iconset>
       </property>
       <property name="iconSize">
@@ -1283,7 +1412,7 @@ QPushButton:pressed {background-color: rgb(205, 228, 247);border-color: rgb(0, 8
        <string/>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="../../__resource__/resource.qrc">
         <normaloff>:/__resource__/image/unit_delete.png</normaloff>:/__resource__/image/unit_delete.png</iconset>
       </property>
       <property name="iconSize">
@@ -1327,7 +1456,7 @@ QPushButton:pressed {background-color: rgb(205, 228, 247);border-color: rgb(0, 8
        <string>Start</string>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="../../__resource__/resource.qrc">
         <normaloff>:/__resource__/image/unit_run.png</normaloff>:/__resource__/image/unit_run.png</iconset>
       </property>
       <property name="iconSize">
@@ -2013,7 +2142,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>모든 영역</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../__resource__/resource.qrc">
          <normaloff>:/__resource__/image/unit_all_stack.png</normaloff>:/__resource__/image/unit_all_stack.png</iconset>
        </property>
        <property name="iconSize">
@@ -2051,7 +2180,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>선택 영역</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../__resource__/resource.qrc">
          <normaloff>:/__resource__/image/unit_selection_stack.png</normaloff>:/__resource__/image/unit_selection_stack.png</iconset>
        </property>
        <property name="iconSize">
@@ -2519,7 +2648,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_x.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_x.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_4">
@@ -2535,7 +2664,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_y.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_y.png</pixmap>
        </property>
       </widget>
       <widget class="QDoubleSpinBox" name="x_p_in">
@@ -2639,7 +2768,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_scale_x.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_scale_x.png</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_2">
@@ -2655,7 +2784,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>:/__resource__/image/unit_scale_y.png</pixmap>
+        <pixmap resource="../../__resource__/resource.qrc">:/__resource__/image/unit_scale_y.png</pixmap>
        </property>
       </widget>
       <widget class="QDoubleSpinBox" name="w_in">
@@ -2758,7 +2887,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>Text</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../__resource__/resource.qrc">
          <normaloff>:/__resource__/image/unit_text_size.png</normaloff>:/__resource__/image/unit_text_size.png</iconset>
        </property>
        <property name="iconSize">
@@ -2796,7 +2925,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>Shape</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../__resource__/resource.qrc">
          <normaloff>:/__resource__/image/unit_box_size.png</normaloff>:/__resource__/image/unit_box_size.png</iconset>
        </property>
        <property name="iconSize">
@@ -2837,7 +2966,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
        <string>Saved Folder</string>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="../../__resource__/resource.qrc">
         <normaloff>:/__resource__/image/unit_open_folder.png</normaloff>:/__resource__/image/unit_open_folder.png</iconset>
       </property>
       <property name="iconSize">
@@ -3147,7 +3276,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>Click</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../__resource__/resource.qrc">
          <normaloff>:/__resource__/image/icon_sub.png</normaloff>:/__resource__/image/icon_sub.png</iconset>
        </property>
        <property name="iconSize">
@@ -3723,7 +3852,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
        <string>Save Settings</string>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="../../__resource__/resource.qrc">
         <normaloff>:/__resource__/image/sc_save.png</normaloff>:/__resource__/image/sc_save.png</iconset>
       </property>
       <property name="iconSize">
@@ -4884,13 +5013,13 @@ Copyright (c) 1994-2008, Mark Hammond </string>
     </property>
     <property name="styleSheet">
      <string notr="true">QLineEdit{
-background-color: white;
-border-style:solid;
-border-width:0px;
-border-color: transparent;
-border-bottom-color: rgb(217, 217, 217);
-margin-top: 1px;
-margin-right: 1px;
+	background-color: white;
+	border-style:solid;
+	border-width:0px;
+	border-color: transparent;
+	border-bottom-color: rgb(217, 217, 217);
+	margin-top: 1px;
+	margin-right: 1px;
 }
 </string>
     </property>
@@ -4908,15 +5037,28 @@ margin-right: 1px;
      <enum>Qt::NoFocus</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {background-color: transparent;border-radius: 0px;border-style: solid;border-width: 3px;border-color: transparent;height: 24px;width: 80px;
-margin-left: 1px;
-margin-right: 1px;
-margin-top: 1px;
-image: url(:/__resource__/image/unit_close.png);}
+     <string notr="true">QPushButton{
+	background-color: transparent;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: transparent;
+	height: 24px;
+	width: 80px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	image: url(:/__resource__/image/unit_close.png);
+}
 
-QPushButton:hover {background-color: rgb(232, 17, 35);
-image: url(:/__resource__/image/unit_close_pressed.png);}
-QPushButton:pressed {background-color: rgb(241, 112, 122);}</string>
+QPushButton:hover{
+	background-color: rgb(232, 17, 35);
+	image: url(:/__resource__/image/unit_close_pressed.png);
+}
+
+QPushButton:pressed{
+	background-color: rgb(241, 112, 122);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -4941,14 +5083,26 @@ QPushButton:pressed {background-color: rgb(241, 112, 122);}</string>
      <enum>Qt::NoFocus</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {background-color: transparent;border-radius: 0px;border-style: solid;border-width: 3px;border-color: transparent;height: 24px;width: 80px;
-margin-left: 1px;
-margin-right: 1px;
-margin-top: 1px;
-image: url(:/__resource__/image/unit_min.png);
+     <string notr="true">QPushButton{
+	background-color: transparent;
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: transparent;
+	height: 24px;
+	width: 80px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	image: url(:/__resource__/image/unit_min.png);
 }
-QPushButton:hover {background-color: rgb(230, 230, 230);}
-QPushButton:pressed {background-color: rgb(205, 205, 205);}</string>
+QPushButton:hover{
+	background-color: rgb(230, 230, 230);
+}
+
+QPushButton:pressed{
+	background-color: rgb(205, 205, 205);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -4999,10 +5153,10 @@ font: 18px; color: rgb(0, 102, 180);
     <property name="styleSheet">
      <string notr="true">/**프레임**/
 QFrame{
-background-color: rgb(0, 102, 180);
-border-style:solid;
-border-width:0px ;
-/*border-color: rgb(0, 102, 180);*/
+	background-color: rgb(0, 102, 180);
+	border-style:solid;
+	border-width:0px ;
+	/*border-color: rgb(0, 102, 180);*/
 }</string>
     </property>
     <property name="frameShape">
@@ -5048,14 +5202,24 @@ border-style: solid;border-width: 0px;</string>
     <property name="styleSheet">
      <string notr="true">/*** 토글버튼 ***/
 QCheckBox{
-margin-left: 1px;
-margin-right: 1px;
-margin-top: 1px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
 }
 
-QCheckBox::indicator:checked{image: url(:/__resource__/image/unit_toggle_on.png);margin-left:6px}
-QCheckBox::indicator:unchecked{image: url(:/__resource__/image/unit_toggle_off.png);margin-left:6px}
-QCheckBox:hover {background-color: rgb(230, 230, 230);}
+QCheckBox::indicator:checked{
+	image: url(:/__resource__/image/unit_toggle_on.png);
+	margin-left:6px;
+}
+
+QCheckBox::indicator:unchecked{
+	image: url(:/__resource__/image/unit_toggle_off.png);
+	margin-left:6px;
+}
+
+QCheckBox:hover{
+	background-color: rgb(230, 230, 230);
+}
 </string>
     </property>
     <property name="text">
@@ -5084,15 +5248,27 @@ QCheckBox:hover {background-color: rgb(230, 230, 230);}
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QRadioButton{}
+     <string notr="true">/*라디오버튼 아이콘*/
+QRadioButton::indicator:checked{
+	image: url(None);
+}
 
-/*라디오버튼 아이콘*/
-QRadioButton::indicator:checked{image: url(None);}
-QRadioButton::indicator:unchecked{image: url(None);}
+QRadioButton::indicator:unchecked{
+	image: url(None);
+}
 
-QRadioButton:unchecked{color: white;} /*라디오버튼 텍스트 컬러*/
-QRadioButton:hover{background-color: rgb(0, 88, 155);}
-QRadioButton:checked{background-color: rgb(0, 73, 130);color: white;}
+QRadioButton:unchecked{
+	color: white;
+}
+
+QRadioButton:hover{
+	background-color: rgb(0, 88, 155);
+}
+
+QRadioButton:checked{
+	background-color: rgb(0, 73, 130);
+	color: white;
+}
 </string>
     </property>
     <property name="title">

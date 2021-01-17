@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 #Title
-app_ver = "ExcelTool 0.3.8" #메인윈도우 제목
+app_ver = "ExcelTool 0.3.9" #메인윈도우 제목
 app_sub_box = "Screenshot : Box" #서브윈도우 제목
 app_sub_drag = "Screenshot : Drag" #서브윈도우 제목
 qt_class_name = "Qt5152QWindowIcon" #QT 클래스네임
