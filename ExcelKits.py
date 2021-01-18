@@ -184,7 +184,7 @@ class CLASS_MAINWINDOW(QMainWindow):
 
     #설정저장 : ini
     def sc_save_run(self):
-        try:Path(app_path+"/Lib/Settings").mkdir() #폴더 없으면 만들기
+        try:Path(app_path+"/Lib/excelkits_settings").mkdir() #폴더 없으면 만들기
         except:pass #폴더 있으면 패스
         try :
             config = configparser.ConfigParser()
