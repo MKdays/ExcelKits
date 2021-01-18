@@ -163,7 +163,7 @@ class CLASS_MAINWINDOW(QMainWindow):
         self.app_close_btn.clicked.connect(self.app_close_run) #윈도우 닫기
         self.icons8_btn.clicked.connect(lambda : self.url_run("https://icons8.com"))
         self.blog_btn.clicked.connect(lambda : self.url_run("https://blog.naver.com/eliase"))
-        self.src_btn.clicked.connect(lambda : self.url_run("https://github.com/MKdays/ExcelTool"))
+        self.src_btn.clicked.connect(lambda : self.url_run("https://github.com/MKdays/ExcelKits"))
         self.test_btn.clicked.connect(self.test_run) #테스트버튼
         self.sc_btn_1.clicked.connect(lambda : self.url_run(self.sc_url_in_1.text()))
         self.sc_btn_2.clicked.connect(lambda : self.url_run(self.sc_url_in_2.text()))
@@ -188,7 +188,7 @@ class CLASS_MAINWINDOW(QMainWindow):
         except:pass #폴더 있으면 패스
         try :
             config = configparser.ConfigParser()
-            config_file_path = app_path + "/Lib/exceltool_settings/settings.ini"
+            config_file_path = app_path + "/Lib/excelkits_settings/settings.ini"
             config.read(config_file_path, encoding="utf-8")
 
             #Section_N 작성
@@ -219,7 +219,7 @@ class CLASS_MAINWINDOW(QMainWindow):
     def sc_load_run(self):
         try:
             config = configparser.ConfigParser()
-            config_file_path = app_path + "/Lib/exceltool_settings/settings.ini"
+            config_file_path = app_path + "/Lib/excelkits_settings/settings.ini"
             config.read(config_file_path, encoding="utf-8")
             for i in range (1,7):
                 a = config["Section_"+str(i)]["title"]
