@@ -1,4 +1,4 @@
-# ExcelTool
+# ExcelKits
 [![](https://img.shields.io/badge/License-GPLv3-red?style=flat-square)](LICENSE.txt)
 [![](https://img.shields.io/badge/qt__resource-__resource\_\_-green?style=flat-square)](https://github.com/MKdays/__resource__)
 [![](https://img.shields.io/badge/Resources-icons8-blue?style=flat-square)](https://icons8.com/)
