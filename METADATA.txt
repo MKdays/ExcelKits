@@ -1,0 +1,31 @@
+# --- Metadata --- #
+
+Directories & Files	:	Copyright	:	License	:	How to get the source code
+						
+PySide2 (Include all subdirectories and files)	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+shiboken2 (Include all subdirectories and files)	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Core.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Gui.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Network.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Qml.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Widgets.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+Qt5Xml.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+pyside2.abi3.dll	:	The Qt Company Ltd.	:	GPLv3	:	pip install PySide2
+pythoncom39.dll	:	Greg Stein and Mark Hammond	:	PSF 2.0	:	pip install pywin32
+pywintypes39.dll	:	Greg Stein and Mark Hammond	:	PSF 2.0	:	pip install pywin32
+win32api.pyd	:	Greg Stein and Mark Hammond	:	PSF 2.0	:	pip install pywin32
+win32gui.pyd	:	Greg Stein and Mark Hammond	:	PSF 2.0	:	pip install pywin32
+_bz2.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+_ctypes.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+_lzma.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+_queue.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+_socket.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+libffi-7.dll	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+python3.dll	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+python39.dll	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+select.pyd	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+base_library.zip	:	Python Software Foundation	:	PSF 2.0	:	https://www.python.org/
+VCRUNTIME140.dll	:	Microsoft Corporation	:	C RUNTIME LIBRARY	:	https://www.microsoft.com/
+MSVCP140.dll	:	Microsoft Corporation	:	C RUNTIME LIBRARY	:	https://www.microsoft.com/
+MSVCP140_1.dll	:	Microsoft Corporation	:	C RUNTIME LIBRARY	:	https://www.microsoft.com/
+api-ms-win-core-path-l1-1-0.dll	:	Microsoft Corporation	:	ApiSet Stub DLL	:	https://www.microsoft.com/
