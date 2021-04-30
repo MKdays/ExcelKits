@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 #Title
-app_ver = "ExcelKits 0.4.1" #메인윈도우 제목
+app_ver = "ExcelKits 0.4.2" #메인윈도우 제목
 app_sub_box = "Screenshot : Box" #서브윈도우 제목
 app_sub_drag = "Screenshot : Drag" #서브윈도우 제목
 qt_class_name = "Qt5152QWindowIcon" #QT 클래스네임
@@ -148,6 +148,7 @@ class CLASS_MAINWINDOW(QMainWindow):
         self.chart_btn.clicked.connect(self.l_cnt_run) #차트갯수 자동입력
         self.gr_col_btn.clicked.connect(self.gr_col_run) #그룹 컬러
         self.cln_btn.clicked.connect(self.cln_run) #공백제거
+        self.color_cnt_btn.clicked.connect(self.color_cnt) #컬러카운트
         self.t_box_fix_btn.clicked.connect(self.t_box_fix_run) #ppt font_box_fixed
         self.t_box_free_btn.clicked.connect(self.t_box_free_run) #ppt font_box_free
         self.x_p_btn.clicked.connect(self.x_p_run) #ppt 도형 위치
@@ -569,6 +570,57 @@ class CLASS_MAINWINDOW(QMainWindow):
             if job_success == True: self.instance_message.popup("알림","작업을 완료했습니다.", 1)
             else: self.instance_message.popup("알림","설정을 확인해주세요", 1)
 
+
+    def color_cnt(self):
+        global excel, wb, ws, excel_connect
+        self.excel_dispatch()
+        if excel_connect == False :
+            self.pre_return()
+            return
+        self.instance_message.popup("확인","작업을 실행합니다.\n시간이 다소 소요됩니다.", 2)
+        if self.QnA == 2:
+            self.pre_return()
+            return
+        try:
+            n = len(ws.UsedRange) #테이터 갯수 파악
+            pbar_value_step = round(10000/n+0.5) #프로그레스바
+            pbar_value = 0 #프로그레스바
+            
+            colored_value = []
+            colored_value_code = []
+            for i in ws.UsedRange:
+                if i.Interior.ColorIndex != -4142: #기본값이 아니라면
+                    colored_value.append([i.Value2, None])
+                    colored_value_code.append([i.Interior.ColorIndex, None])
+                pbar_value += pbar_value_step #프로그레스바
+                QApplication.processEvents() #프로그레스바
+                if pbar_value > 10000:self.pbar3.setValue(10000)
+                else : self.pbar3.setValue(pbar_value) #프로그레스바
+
+            cnt = len(colored_value)
+            ws_new = wb.Worksheets.Add() #시트복제
+            ws_new.Range(excel.Cells(2, 1),excel.Cells(1+cnt, 1)).Value2 = colored_value
+            ws_new.Range(excel.Cells(2, 2),excel.Cells(1+cnt, 2)).Value2 = colored_value_code
+            ws_new.Range("A1").Value2 = "Value"
+            ws_new.Range("B1").Value2 = "Color"
+            ws_new.Range("A1:B1").Interior.Color = 6250335 #제목줄 색상
+            ws_new.Range("A1:B1").Font.ColorIndex = 2 #제목줄 색상
+
+            try:
+                wb.ActiveSheet.Name = "Result"
+            except:
+                try:
+                    wb.ActiveSheet.Name = ("Result_"+str(wb.Sheets.Count))
+                except:
+                    wb.ActiveSheet.Name = ("Result__"+str(wb.Sheets.Count))
+            job_success = True
+        except:
+            job_success = False
+        finally:
+            self.pre_return()
+            if job_success == True: self.instance_message.popup("알림","작업을 완료했습니다.", 1)
+            else: self.instance_message.popup("알림","설정을 확인해주세요", 1)        
+
     #함수 : 엑셀 피치 셀렉트
     def pit_run(self):
         global excel, wb, ws, excel_connect
@@ -674,7 +726,6 @@ class CLASS_MAINWINDOW(QMainWindow):
             return
         try:
             if option == True : ws.UsedRange.Select() #옵션 선택시 시트 전체선택
-            if excel.Selection.SpecialCells(2).Count < 2 : raise NotImplementedError #데이터 2개 미만시 에러처리
             var = excel.Selection.Value2
             col_cnt = excel.Selection.Columns.Count
             datas = [(data[i],) for i in range(col_cnt) for data in var if data[i] != None]
@@ -1134,7 +1185,6 @@ class CLASS_MAINWINDOW(QMainWindow):
 
         try:
             if excel.Selection.Columns.Count < 2 or excel.Selection.Rows.Count < 2 : raise NotImplementedError #2x2 미선택시 에러처리
-            if excel.Selection.SpecialCells(2).Count < 2 : raise NotImplementedError #데이터 2개 미만시 에러처리
             x_max = excel.Selection.Columns.Count-1 #선택영역의 열갯수
             y_max = excel.Selection.Rows.Count-1 #선택영역의 행갯수
             total_l = y_max*x_max

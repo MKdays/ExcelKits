@@ -2386,7 +2386,7 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>150</y>
+        <y>130</y>
         <width>370</width>
         <height>301</height>
        </rect>
@@ -2576,12 +2576,44 @@ QRadioButton:hover {background-color: rgb(230, 230, 230);}</string>
         <string>Apply</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="color_cnt_btn">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>230</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string>Apply</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dmy_31">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>160</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>색상있는 Cell값 모으기</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
      </widget>
      <widget class="QProgressBar" name="pbar3">
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>380</y>
+        <y>410</y>
         <width>360</width>
         <height>30</height>
        </rect>
@@ -4861,6 +4893,8 @@ border-width: 1px
        <property name="plainText">
         <string>Copyright (C) 2021 MKdays
 https://github.com/MKdays/ExcelKits
+
+The copyright display on this screen must be notified and configured in About Menu.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
