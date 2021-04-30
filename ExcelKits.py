@@ -21,6 +21,8 @@ import webbrowser #브라우저
 from itertools import chain #리스트 데이터
 from datetime import * #위크넘버 확인
 import configparser #ini 설정 저장
+import glob #파일매니저
+import shutil #파일매니저
 
 #QT
 from PySide2.QtWidgets import *
@@ -105,6 +107,8 @@ class CLASS_MAINWINDOW(QMainWindow):
         #테이블 헤더 사이즈 자동 맞춤
         header = self.file_control.horizontalHeader()
         header.setSectionResizeMode(0, QHeaderView.ResizeToContents)
+        self.file_target_folder_text.setText(app_path) #파일매니저 경로 현재 위치로 설정
+        self.save_folder_text.setText(app_path) #파일매니저 경로 현재 위치로 설정
 
     def definitions(self): #인스턴스/변수 정의
         self.excel_file_list = [] #파일리스트
@@ -122,8 +126,9 @@ class CLASS_MAINWINDOW(QMainWindow):
         self.radio_3.pressed.connect(lambda : self.radio_run(3,"Function"))
         self.radio_4.pressed.connect(lambda : self.radio_run(4,"PowerPoint"))
         self.radio_5.pressed.connect(lambda : self.radio_run(5,"ScreenShot"))
-        self.radio_6.pressed.connect(lambda : self.radio_run(6,"Shortcut"))
-        self.radio_7.pressed.connect(lambda : self.radio_run(7,"About"))
+        self.radio_6.pressed.connect(lambda : self.radio_run(6,"File Manager"))
+        self.radio_7.pressed.connect(lambda : self.radio_run(7,"Shortcut"))
+        self.radio_8.pressed.connect(lambda : self.radio_run(8,"About"))
 
     def signals(self):
         self.color_opt1.clicked.connect(self.color_opt1_run) #차트 색상표1
@@ -173,6 +178,63 @@ class CLASS_MAINWINDOW(QMainWindow):
         self.sc_btn_5.clicked.connect(lambda : self.url_run(self.sc_url_in_5.text()))
         self.sc_btn_6.clicked.connect(lambda : self.url_run(self.sc_url_in_6.text()))
         self.sc_save_btn.clicked.connect(self.sc_save_run)
+        self.file_target_folder_btn.clicked.connect(self.file_target_folder_btn_run)
+        self.save_folder_btn.clicked.connect(self.save_folder_btn_run)
+        self.file_target_folder_list_btn.clicked.connect(self.file_target_folder_list_btn_run)
+        self.file_save_folder_btn.clicked.connect(self.file_save_folder_btn_run)
+
+    def file_target_folder_btn_run(self):
+        path = QFileDialog.getExistingDirectory(self, 'Select', self.file_target_folder_text.text())
+        if len(path) < 1 : return
+        self.file_target_folder_text.setText(path)
+
+    def save_folder_btn_run(self):
+        path = QFileDialog.getExistingDirectory(self, 'Select', self.save_folder_text.text())
+        if len(path) < 1 : return
+        self.save_folder_text.setText(path)
+
+    def file_target_folder_list_btn_run(self): #리스트
+        try:
+            destination = self.save_folder_text.text()
+            path = self.file_target_folder_text.text()
+            if path == "C:/":
+                self.instance_message.popup("알림","드라이브 최상위입니다.<br>작업 경로를 설정해주세요.", 1)
+                return
+            option = "/**"
+            output = glob.glob(path + option, recursive=True)
+            self.output_text.setText("")
+            for i in output:
+                self.output_text.append(i)
+        except Exception as e:
+            self.instance_message.popup("알림",e, 1)
+
+    def file_save_folder_btn_run(self): #메인함수
+        self.instance_message.popup("확인","작업을 실행합니다.", 2)
+        if self.QnA == 2: return
+        try:
+            destination = self.save_folder_text.text()
+            path = self.file_target_folder_text.text()
+            if path == "C:/":
+                self.instance_message.popup("알림","드라이브 최상위입니다.<br>작업 경로를 설정해주세요.", 1)
+                return            
+            option = "/**"
+            output = glob.glob(path + option, recursive=True)
+            name = self.file_target_text.text()
+            name_end = self.file_target_end_text.text()
+            file_name = name + "." + name_end
+
+            origin_path = []
+            for i in output:
+                if Path(i).name == file_name:
+                    origin_path.append(i)
+                    name = Path(i).name
+                    parent_name = str(Path(i).parent).replace("\\","_").replace(":", "")
+                    shutil.copy(i, destination)
+                    os.rename(destination + "/" + name, destination + "/" + parent_name + "___" + name)
+            self.instance_message.popup("알림","작업을 완료했습니다.", 1)
+            webbrowser.open(destination)
+        except Exception as e:
+            self.instance_message.popup("알림",e, 1)
 
     def radio_run(self,num,text):
         self.tab_main.setCurrentIndex(num)
@@ -1178,7 +1240,7 @@ class CLASS_MAINWINDOW(QMainWindow):
         if excel_connect == False :
             self.pre_return()
             return
-        self.instance_message.popup("확인","선택한 영역의 교차값을 X, Y, Value 형태로 재배치합니다.", 2)
+        self.instance_message.popup("확인","선택한 영역의 X, Y 교차값을 Value 열에 한줄로 정렬시킵니다.", 2)
         if self.QnA == 2:
             self.pre_return()
             return
