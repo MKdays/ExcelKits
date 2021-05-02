@@ -225,7 +225,7 @@ class CLASS_MAINWINDOW(QMainWindow):
 
             origin_path = []
             for i in output:
-                if Path(i).name == file_name:
+                if Path(i).name.upper() == file_name.upper():
                     origin_path.append(i)
                     name = Path(i).name
                     parent_name = str(Path(i).parent).replace("\\","_").replace(":", "")
